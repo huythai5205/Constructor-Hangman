@@ -8,12 +8,14 @@ class Word {
     }
 
     checkGuess(userGuess) {
-        console.log(userGuess);
+        let gotAGuess = 'Incorrect';
         for (let index in this) {
             if (this[index].letter === userGuess) {
                 this[index].setGuessed();
+                gotAGuess = 'Correct';
             }
         }
+        return gotAGuess;
     }
 
     checkWordGuessed() {
